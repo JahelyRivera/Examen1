@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PagePrincipal"
+             NavigationPage.HasNavigationBar="False">
+    
+    <StackLayout BackgroundColor="#FFDDBA">
+        <Label Text="Proyecto Examen"
+               FontSize="35"
+               FontAttributes="Bold"
+               TextColor="#6E4417"
+               Margin="0,20,0,0"
+               HorizontalOptions="Center"/>
+       
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="20"
+               CornerRadius="30"
+               HasShadow="False">
+
+            <StackLayout>
+                <Image Source="logo.png"
+                       WidthRequest="100" HeightRequest="100"/>
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Image Source="perfil.png"
+                       WidthRequest="180" HeightRequest="180"
+                       VerticalOptions="CenterAndExpand"/>
+                    <Button x:Name="BtnAgregar" Text="Agregar información" Clicked="BtnAgregar_Clicked"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            TextTransform="None"
+                            BackgroundColor="#EFAC67"
+                            BorderColor="#793F03"
+                            CornerRadius="15"
+                            VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+        <Label Text="Jahely Fernanda Rivera Cruz"
+               FontSize="18"
+               FontAttributes="Italic"
+               TextColor="#724D27"
+               Margin="0,0,0,20"
+               HorizontalOptions="Center"/>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageMostrar"
+             Title="Contactos"
+             Background="#FAD1A2">
+
+    <StackLayout>
+
+        <CollectionView x:Name="listaContactos"
+                    Margin="10"
+                    SelectionMode="Single"
+                    SelectionChanged="listaContactos_SelectionChanged_1">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <SwipeView>
+
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Editar"
+                                           BackgroundColor="#30C0DD"
+                                           CommandParameter="{Binding .}"
+                                           Invoked="SwipeItem_Invoked"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Grid RowSpacing="0" BackgroundColor="#74C4ED">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}" 
+                               Grid.Row="1" Grid.RowSpan="3"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               FontSize="30"
+                               TextColor="#000D18"/>
+                            <Label Text="" 
+                               Grid.Row="1" Grid.Column="3" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18"
+                               TextColor="#B65200"/>
+                            <Label Text="{Binding Nombres}"                                     
+                               Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="21"
+                               TextColor="#00284B"/>
+                            <Label Text="{Binding Apellidos}" 
+                               Grid.Row="0" Grid.Column="2"
+                               FontSize="21"
+                               TextColor="#00284B"/>
+                            <Label Text="Telefono:" 
+                               Grid.Row="1" Grid.Column="1" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18"
+                               TextColor="#B65200"/>
+                            <Label Text="{Binding Telefono}" 
+                               Grid.Row="1" Grid.Column="2" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18"
+                               TextColor="#00284B"/>
+                            <Label Text="Edad:" 
+                               Grid.Row="2" Grid.Column="1" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18"
+                               TextColor="#B65200"/>
+                            <Label Text="{Binding Edad}" 
+                               Grid.Row="2" Grid.Column="2" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18" 
+                               TextColor="#00284B"/>
+                            <Label Text="Pais:" 
+                               Grid.Row="3" Grid.Column="1" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18"
+                               TextColor="#B65200"/>
+                            <Label Text="{Binding Pais}" 
+                               Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18" 
+                               TextColor="#00284B"/>
+                            <Label Text="Nota:" 
+                               Grid.Row="4" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18"
+                               TextColor="#B65200"/>
+                            <Label Text="{Binding Nota}" 
+                               Grid.Row="4" Grid.Column="2" 
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="18" 
+                               TextColor="#00284B"/>
+                        </Grid>
+
+                    </SwipeView>
+                    
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

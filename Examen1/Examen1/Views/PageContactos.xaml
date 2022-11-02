@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageContactos">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Mostrar datos" x:Name="ToolAdd" Clicked="ToolAdd_Clicked"/>
+        <ToolbarItem Text="Geolocalización" x:Name="MostrarGeo" Clicked="MostrarGeo_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout BackgroundColor="#FFDDBA"
+                     VerticalOptions="FillAndExpand"  >
+
+        <Image Source="logo.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="10"/>
+        <Label Text="Ingrese los datos"
+               FontSize="23.5"
+               FontAttributes="Bold"
+               TextColor="#442708"
+               Margin="-10"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <Entry x:Name="TxtCodigo" Keyboard="Text"
+                   FontSize="10"
+                   TextColor="Black"
+                   PlaceholderColor="#FFDDBA"
+                   WidthRequest="50" HeightRequest="20"/>
+        <Label Text="Nombre"
+               FontSize="20"
+               TextColor="#6E4417"
+               Margin="20,-5,0,0"/>
+        <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10">
+
+            <Entry x:Name="TxtNombres" Placeholder="Ingrese su nombre" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+        </Frame>
+
+        <Label Text="Apellido"
+               FontSize="20"
+               TextColor="#6E4417"
+               Margin="20,10,0,0"/>
+        <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10">
+
+            <Entry x:Name="TxtApellidos" Placeholder="Ingrese su apellido" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+        </Frame>
+
+        <Label Text="Telefono"
+               FontSize="20"
+               TextColor="#6E4417"
+               Margin="20,10,0,0"/>
+        <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10">
+
+            <Entry x:Name="TxtTelefono" Placeholder="Ingrese su celular" Keyboard="Telephone"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+        </Frame>
+
+        <Label Text="Edad"
+               FontSize="20"
+               TextColor="#6E4417"
+               Margin="20,10,0,0"/>
+        <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,279,-10">
+
+            <Entry x:Name="TxtEdad" Placeholder="Ingrese su edad" Keyboard="Numeric"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+        </Frame>
+
+        <Label Text="Pais"
+               FontSize="20"
+               TextColor="#6E4417"
+               Margin="20,10,0,0"/>
+        <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"               
+               CornerRadius="15"
+               Margin="20,0,20,-10">
+
+            <Picker x:Name="pickerCountry" Title="Seleccione un pais" 
+                    TextColor="#6E4417"
+                    WidthRequest="50" HeightRequest="37">
+                <Picker.Items>
+                    <x:String>
+                        Honduras (504)
+                    </x:String>
+                    <x:String>
+                        Costa Rica
+                    </x:String>
+                    <x:String>
+                        Guatemala (502)
+                    </x:String>
+                    <x:String>
+                        El Salvador
+                    </x:String>
+                </Picker.Items>
+            </Picker>
+        </Frame>
+        
+        <Label Text="Nota"
+               FontSize="20"
+               TextColor="#6E4417"
+               Margin="20,10,0,0"/>
+        <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10">
+
+            <Entry x:Name="TxtNota" Placeholder="Ingrese descripcion" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="50"/>
+        </Frame>
+
+        <Button x:Name="BtnAgregar" Text="Salvar contacto" Clicked="BtnAgregar_Clicked"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextTransform="None"
+                BackgroundColor="#EFAC67"
+                BorderColor="#793F03"
+                CornerRadius="15"
+                Margin="20,0,20,-7"
+                VerticalOptions="CenterAndExpand"/>
+
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:local="clr-namespace:Examen1"             
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Examen1.Views.PageGeo">
+
+    <StackLayout Background="#FFDDBA">
+        <Label Text="Latitud: " TextColor="#1B6D7E" FontSize="20"/>
+        <Label x:Name="Lat" TextColor="#000D18" FontSize="15"/>
+        <Label Text="Longitud: " TextColor="#1B6D7E" FontSize="20"/>
+        <Label x:Name="Lon" TextColor="#000D18" FontSize="15"/>        
+
+        <maps:Map HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              x:Name="Mapas"
+              IsShowingUser="True"/>
+        
+    </StackLayout>
+    
+</ContentPage>
